@@ -1,0 +1,195 @@
+/* General Page Container */
+.temp-history-container,
+.soil-history-container,
+.rain-history-container,
+.humidity-history-container,
+.pir-history-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 95%;
+  margin: auto;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #1c28cf, #dce5f7);
+  min-height: 100vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.para, .text-group {
+  color: #0e44d8;
+}
+
+/* Heading Styling */
+h1 {
+  color: #1e3a8a; /* Deep blue */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #020202;
+}
+
+/* Back & Logout Button Container */
+.back-button-container {
+  display: flex;
+  justify-content: space-between; /* Places buttons on opposite sides */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Back Button Styling */
+.back-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Logout Button Styling (Pushed to the Right) */
+.logout-button {
+  padding: 12px 24px;
+  background-color: #d9534f; /* Red color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+/* Flex Container for Gauge & Graph */
+.sensor-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Gauge Container */
+.gauge-container {
+  flex: 1;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0f2fe;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gauge h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #000000;
+}
+
+/* Chart Container */
+.chart-container {
+  flex: 2;
+  height: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* History Table Styling */
+.history-table {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background: white;
+  border-radius: 12px;
+}
+
+/* Table Headings */
+th {
+  background-color: #1e3a8a;
+  color: white;
+  font-weight: bold;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+/* Table Cells */
+td {
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) td {
+  background-color: #f1f5f9;
+}
+
+tr:nth-child(odd) td {
+  background-color: #e0f2fe;
+}
+
+/* Hover Effect */
+tr:hover td {
+  background-color: #c7d2fe;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sensor-flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gauge-container, .chart-container {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* Gauge Chart Text Color Fix */
+#pir-gauge .text-group text,
+#rain-gauge .text-group text,
+#root .CircularProgressbar text {
+  fill: rgb(10, 10, 12) !important;
+}

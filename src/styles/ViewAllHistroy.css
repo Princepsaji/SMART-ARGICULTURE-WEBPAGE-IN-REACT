@@ -1,0 +1,164 @@
+/* General Page Container */
+.sensor-data-history-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 95%;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #0c62c4, #dce5f7);
+    min-height: 100vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Styling */
+h1 {
+    color: #1e3a8a;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #020202;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* Navigation Container */
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin-bottom: 25px;
+}
+
+/* Button Styling */
+.navigation-back-button,
+.navigation-logout-button {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.navigation-back-button {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.navigation-back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.08);
+}
+
+.navigation-logout-button {
+    background-color: #d9534f;
+    color: white;
+}
+
+.navigation-logout-button:hover {
+    background-color: #c9302c;
+    transform: scale(1.08);
+}
+
+/* Sensor Data Container */
+.sensor-charts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.sensor-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 130%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    gap: 20px;
+}
+
+/* Gauge Container */
+.sensor-gauge-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    min-height: 350px;
+}
+
+/* Chart Container */
+.sensor-chart-container {
+    flex: 2;
+    height: 350px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sensor-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sensor-gauge-container, .sensor-chart-container {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation-back-button,
+    .navigation-logout-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sensor-gauge-container {
+        max-width: 100%;
+        min-height: auto;
+        padding: 30px;
+    }
+
+    .sensor-chart-container {
+        min-height: auto;
+        max-width: 100%;
+        padding: 30px;
+    }
+}

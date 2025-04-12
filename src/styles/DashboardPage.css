@@ -1,0 +1,217 @@
+/* Apply smooth font and background styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 95%;
+    margin: auto;
+    position: relative;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+/* Smart Agriculture Title */
+.smart-agriculture-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; /* Gold Color */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Real-Time Dashboard - Centered */
+.real-time-dashboard {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* Buttons Container - Right Aligned */
+.dashboard-buttons {
+    display: flex;
+    gap: 15px; /* Added space between buttons */
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* View All History Button */
+.history-button {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.history-button:hover {
+    background: rgba(0, 123, 255, 1);
+}
+
+/* Logout Button */
+.logout-button {
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background: rgba(255, 0, 0, 1);
+}
+
+/* Grid layout for sensor cards */
+.data-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Modern Glassmorphism Effect */
+.data-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Effect */
+.data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Sensor Title */
+.data-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Sensor Value */
+.data-card p {
+    font-size: 18px;
+    color: rgba(240, 240, 240, 0.9);
+    font-weight: 500;
+}
+
+/* Centering Gauge Properly */
+.gauge-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 15px 0;
+    position: relative;
+}
+
+/* Fix Gauge Size */
+.gauge-container > svg {
+    width: 180px !important;
+    height: 100px !important;
+}
+
+/* Show Gauge Values */
+.gauge-container text {
+    display: block !important;
+    fill: white !important;
+    font-size: 18px !important;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+/* View History Link */
+.view-history-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.view-history-link:hover {
+    background-color: rgba(0, 123, 255, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .smart-agriculture-title {
+        font-size: 28px;
+    }
+
+    .real-time-dashboard {
+        font-size: 24px;
+    }
+
+    .dashboard-buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .history-button,
+    .logout-button {
+        width: auto;
+    }
+
+    .data-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gauge-container {
+        height: 180px;
+    }
+
+    .gauge-container > svg {
+        width: 160px !important;
+        height: 90px !important;
+    }
+}
